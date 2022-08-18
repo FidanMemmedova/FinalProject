@@ -2,7 +2,10 @@
 function mapFunction() {
     let contactMapHandler = document.querySelectorAll(".test");
     console.log('--->', contactMapHandler);
-    contactMapHandler.forEach((map) => {
+    contactMapHandler.forEach(function(map,index) {
+        console.log('this', this);
+        console.log('index', index);
+        console.log('map--->>>',map)
         if (map.style.display === "none") {
             map.style.display = "block";
         }
@@ -10,6 +13,6 @@ function mapFunction() {
             map.style.display = "none";
         }
     })
-   
-}
+
+};
     
