@@ -26,7 +26,7 @@
                         <td>@order</td>
                         <td>@news.RedirectUrl</td>
                         <td>@news.CreatedAt.ToString("dd-mm-yyyy")</td>
-                        <td><img src="~/uploads/news/@news.Image" style="width:100px;height:60px;border-radius:0px;" /></td>
+                        <td><img src="~/assets/images/news/@news.Image" style="width:100px;height:60px;border-radius:0px;" /></td>
                         <td>
                             <a asp-action="edit" asp-route-id="@news.Id" class="btn btn-success">Edit</a>
                             <a asp-action="deletefetch" asp-route-id="@news.Id" class="btn btn-danger btn-sweet-delete">Delete</a>

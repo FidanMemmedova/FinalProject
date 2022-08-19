@@ -17,7 +17,7 @@
             <div class="block-body">
                 <div class="accordion">
                     @foreach (Faq faq in Model)
-                    {
+                     {
                         <div class="content-box mb-20 @(faq == Model[0] ? "active" :"")">
                             <div class="label">
                                 @faq.Title
@@ -28,8 +28,7 @@
                                 </p>
                             </div>
                         </div>
-
-                    }
+                     }
                 </div>
             </div>
         </div>
