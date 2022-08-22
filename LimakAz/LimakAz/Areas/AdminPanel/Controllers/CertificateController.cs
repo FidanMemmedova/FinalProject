@@ -62,7 +62,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
 
                 string newFileName = Guid.NewGuid().ToString() + fileName;
 
-                string path = Path.Combine(_env.WebRootPath, "assets/images/certificates", newFileName);
+                string path = Path.Combine(_env.WebRootPath, "uploads/certificates", newFileName);
 
                 using (FileStream stream = new FileStream(path, FileMode.Create))
                 {
@@ -120,7 +120,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
 
                 string newFileName = Guid.NewGuid().ToString() + fileName;
 
-                string path = Path.Combine(_env.WebRootPath, "assets/images/certificates", newFileName);
+                string path = Path.Combine(_env.WebRootPath, "uploads/certificates", newFileName);
 
                 using (FileStream stream = new FileStream(path, FileMode.Create))
                 {
@@ -129,7 +129,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
 
                 if (existCertificate.Image != null)
                 {
-                    string deletePath = Path.Combine(_env.WebRootPath, "assets/images/certificates", existCertificate.Image);
+                    string deletePath = Path.Combine(_env.WebRootPath, "uploads/certificates", existCertificate.Image);
 
                     if (System.IO.File.Exists(deletePath))
                     {
@@ -142,7 +142,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
             }
             else if (certificate.Image == null && existCertificate.Image != null)
             {
-                string deletePath = Path.Combine(_env.WebRootPath, "assets/images/certificates", existCertificate.Image);
+                string deletePath = Path.Combine(_env.WebRootPath, "uploads/certificates", existCertificate.Image);
 
                 if (System.IO.File.Exists(deletePath))
                 {
@@ -175,15 +175,13 @@ namespace LimakAz.Areas.AdminPanel.Controllers
             }
             catch (Exception)
             {
-
                 return Json(new { status = 500 });
             }
-            string deletePath = Path.Combine(_env.WebRootPath, "assets/images/certificatese", certificate.Image);
+            string deletePath = Path.Combine(_env.WebRootPath, "uploads/certificates", certificate.Image);
             if (System.IO.File.Exists(deletePath))
             {
                 System.IO.File.Delete(deletePath);
             }
-
             return RedirectToAction("index", "certificate");
         }
     }

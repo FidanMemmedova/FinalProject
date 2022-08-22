@@ -64,7 +64,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
 
                 string newFileName = Guid.NewGuid().ToString() + fileName;
 
-                string path = Path.Combine(_env.WebRootPath, "assets/images", newFileName);
+                string path = Path.Combine(_env.WebRootPath, "uploads/shopitems", newFileName);
 
                 using (FileStream stream = new FileStream(path, FileMode.Create))
                 {
@@ -127,7 +127,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
 
                 string newFileName = Guid.NewGuid().ToString() + fileName;
 
-                string path = Path.Combine(_env.WebRootPath, "assets/images", newFileName);
+                string path = Path.Combine(_env.WebRootPath, "uploads/shopitems", newFileName);
 
                 using (FileStream stream = new FileStream(path, FileMode.Create))
                 {
@@ -136,7 +136,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
 
                 if (existShopItem.Image != null)
                 {
-                    string deletePath = Path.Combine(_env.WebRootPath, "assets/images", existShopItem.Image);
+                    string deletePath = Path.Combine(_env.WebRootPath, "uploads/shopitems", existShopItem.Image);
 
                     if (System.IO.File.Exists(deletePath))
                     {
@@ -149,7 +149,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
             }
             else if (shopItem.Image == null && existShopItem.Image != null)
             {
-                string deletePath = Path.Combine(_env.WebRootPath, "assets/images", existShopItem.Image);
+                string deletePath = Path.Combine(_env.WebRootPath, "uploads/shopitems", existShopItem.Image);
 
                 if (System.IO.File.Exists(deletePath))
                 {
@@ -186,7 +186,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
 
                 return Json(new { status = 500 });
             }
-            string deletePath = Path.Combine(_env.WebRootPath, "assets/images", shopItem.Image);
+            string deletePath = Path.Combine(_env.WebRootPath, "uploads/shopitems", shopItem.Image);
             if (System.IO.File.Exists(deletePath))
             {
                 System.IO.File.Delete(deletePath);

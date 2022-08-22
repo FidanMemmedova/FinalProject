@@ -68,7 +68,6 @@ namespace LimakAz.Areas.AdminPanel.Controllers
                 }
 
                 news.Image = newFileName;
-
             }
 
             if (!ModelState.IsValid) return View();

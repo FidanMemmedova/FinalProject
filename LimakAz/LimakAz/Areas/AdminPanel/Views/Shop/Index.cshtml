@@ -28,7 +28,7 @@
                         <td>@shopItem.RedirectUrl</td>
                         <td>@shopItem.Category.Name</td>
                         <td>@shopItem.IsFeatured</td>
-                        <td><img src="~/assets/images/@shopItem.Image" style="width:100px;height:60px;border-radius:0px;" /></td>
+                        <td><img src="~/uploads/shopitems/@shopItem.Image" style="width:100px;height:60px;border-radius:0px;" /></td>
                         <td>
                             <a asp-action="edit" asp-route-id="@shopItem.Id" class="btn btn-success">Edit</a>
                             <a asp-action="deletefetch" asp-route-id="@shopItem.Id" class="btn btn-danger btn-sweet-delete">Delete</a>
