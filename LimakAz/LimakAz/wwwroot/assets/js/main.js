@@ -19,7 +19,7 @@ for (let i = 0; i < accordion.length; i++) {
 
 const userBtn = document.querySelector(".user-panel-btn");
 const dropDownContent = document.querySelector(".dropdown-menu");
-console.log('userbtn',userBtn)
+console.log('userbtn',userBtn
 if (userBtn) {
     userBtn.addEventListener("click", (e) => {
         if (e.target.id === "userPanelBtn")
@@ -143,7 +143,7 @@ const checkLabelTwo = document.querySelectorAll(".check-custom-block .ccl-2");
 const checkInputTwo = document.querySelectorAll(".check-custom-block .custom-control-input-2");
 
 function removeActivesInInputTwo() {
-    for (let i = 0; i < checkLabelTwo.length; i++) {
+    for (let i = 0; i < checkLabelTwo.length; i++) { 
         checkLabelTwo[i].classList.remove("custom-radio-dot-2");
     }
 }
@@ -154,10 +154,8 @@ for (let i = 0; i < checkLabelTwo.length; i++) {
 
         checkInputTwo.forEach(el => {
             if (target == el.getAttribute("id")) {
-
                 removeActivesInInputTwo();
                 checkLabelTwo[i].classList.toggle("custom-radio-dot-2");
-
             }
         })
     })

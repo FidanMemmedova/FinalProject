@@ -1,4 +1,5 @@
-﻿using LimakAz.Models;
+﻿using LimakAz.ViewModels;
+using LimakAz.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
@@ -67,6 +68,28 @@ namespace LimakAz.Controllers
             }
             List<Order> orders = _context.Orders.OrderByDescending(x => x.CreatedAt).Where(x => x.AppUserId == member.Id).Where(x => x.InPackageStatus).Include(x => x.Courier).Include(x => x.AppUser).ThenInclude(x => x.WareHouse).ToList();
             return View(orders);
+        }
+
+        public IActionResult Courier()
+        {
+
+            AppUser member = null;
+
+            if (User.Identity.IsAuthenticated)
+            {
+                member = _userManager.Users.FirstOrDefault(x => x.NormalizedUserName == User.Identity.Name.ToUpper());
+            }
+            if (member == null)
+            {
+                return RedirectToAction("index", "error");
+            }
+            CourierViewModel courierVM = new CourierViewModel
+            {
+                Couriers = _context.Couriers.ToList(),
+                User = member
+            };
+
+            return View(courierVM);
         }
     }
 }

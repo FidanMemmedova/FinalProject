@@ -1065,3 +1065,4 @@ C:\Users\ASUS\Desktop\LimakFinall\LimakAz\LimakAz\obj\Debug\netcoreapp3.1\LimakA
 C:\Users\ASUS\Desktop\LimakFinall\LimakAz\LimakAz\obj\Debug\netcoreapp3.1\LimakAz.dll
 C:\Users\ASUS\Desktop\LimakFinall\LimakAz\LimakAz\obj\Debug\netcoreapp3.1\LimakAz.pdb
 C:\Users\ASUS\Desktop\LimakFinall\LimakAz\LimakAz\obj\Debug\netcoreapp3.1\LimakAz.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\LimakFinall\LimakAz\LimakAz\obj\Debug\netcoreapp3.1\Razor\Views\UserPanel\Courier.cshtml.g.cs
