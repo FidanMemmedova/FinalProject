@@ -95,7 +95,7 @@ for (let i = 0; i < copyBtn.length; i++) {
     copyBtn[i].addEventListener("click", function () {
         let target = this.getAttribute("data-target")
         console.log(target);
-        copyText.forEach(el => {
+        collapseDiv.forEach(el => {
             if (target == el.getAttribute("data-id")) {
                 let text = el.textContent;
                 navigator.clipboard.writeText(text);
@@ -119,8 +119,6 @@ function removeActivesInInput() {
         checkLabel[i].classList.remove("custom-radio-dot");
     }
 }
-
-
 
 for (let i = 0; i < checkLabel.length; i++) {
     checkLabel[i].addEventListener("click", function () {
