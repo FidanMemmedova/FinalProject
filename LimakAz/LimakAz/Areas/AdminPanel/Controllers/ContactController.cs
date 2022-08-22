@@ -79,7 +79,8 @@ namespace LimakAz.Areas.AdminPanel.Controllers
             _context.Contacts.Remove(contact);
             _context.SaveChanges();
 
-            return Json(new { status = 200 });
+
+            return RedirectToAction("index", "contact");
         }
     }
 }

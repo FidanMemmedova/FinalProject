@@ -78,8 +78,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
 
             _context.Privacies.Remove(privacy);
             _context.SaveChanges();
-
-            return Json(new { status = 200 });
+            return RedirectToAction("index", "privacy");
         }
     }
 }

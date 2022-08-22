@@ -77,7 +77,7 @@ namespace LimakAz.Areas.Manage.Controllers
             _context.Terms.Remove(term);
             _context.SaveChanges();
 
-            return Json(new { status = 200 });
+            return RedirectToAction("index", "term");
         }
     }
 }

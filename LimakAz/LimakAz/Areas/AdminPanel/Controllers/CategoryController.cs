@@ -81,7 +81,8 @@ namespace LimakAz.Areas.AdminPanel.Controllers
             _context.Categories.Remove(category);
             _context.SaveChanges();
 
-            return Json(new { status = 200 });
+
+            return RedirectToAction("index", "category");
         }
     }
 }

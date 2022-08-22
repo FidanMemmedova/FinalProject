@@ -191,8 +191,7 @@ namespace LimakAz.Areas.AdminPanel.Controllers
             {
                 System.IO.File.Delete(deletePath);
             }
-
-            return Json(new { status = 200 });
+            return RedirectToAction("index", "shop");
         }
     }
 }
