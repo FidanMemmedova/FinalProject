@@ -19,7 +19,7 @@ for (let i = 0; i < accordion.length; i++) {
 
 const userBtn = document.querySelector(".user-panel-btn");
 const dropDownContent = document.querySelector(".dropdown-menu");
-console.log('userbtn',userBtn
+console.log('userbtn',userBtn)
 if (userBtn) {
     userBtn.addEventListener("click", (e) => {
         if (e.target.id === "userPanelBtn")
