@@ -22,7 +22,7 @@
                 Count: <span style="font-weight:bold">@Model.Order.Count</span>
             </p>
             <p class="card-text">
-                Order Warehouse: <span style="font-weight:bold">@Model.Order.AppUser?.WareHouse?.Name</span>
+                Order Warehouse: <span style="font-weight:bold">@Model.Order.AppUser.WareHouse?.Name</span>
             </p>
             <p class="card-text">
                 Order Date: <span style="font-weight:bold">@Model.Order.CreatedAt.AddHours(4).ToString("dd MMM yyyy HH:mm ")</span>

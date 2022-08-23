@@ -22,7 +22,7 @@ namespace LimakAz.Services
             {
                 // create message
                 var email = new MimeMessage();
-                email.From.Add(MailboxAddress.Parse("code.limak.az@yandex.com"));
+                email.From.Add(MailboxAddress.Parse("limakcodeacademy@yandex.com"));
                 email.To.Add(MailboxAddress.Parse(to));
                 email.Subject = subject;
                 email.Body = new TextPart(TextFormat.Html) { Text = html };
@@ -30,7 +30,7 @@ namespace LimakAz.Services
                 // send email
                 using var smtp = new SmtpClient();
                 smtp.Connect("smtp.yandex.com", 587, SecureSocketOptions.StartTls);
-                smtp.Authenticate("code.limak.az@yandex.com", "code2022");
+                smtp.Authenticate("limakcodeacademy@yandex.com", "limakcodeacademy2022");
                 smtp.Send(email);
                 smtp.Disconnect(true);
             }

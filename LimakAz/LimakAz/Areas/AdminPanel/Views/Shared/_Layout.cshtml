@@ -52,6 +52,12 @@
                     <a class="nav-link" asp-action="index" asp-controller="order">Orders</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" asp-action="index" asp-controller="courier">Courier</a>
+                </li>
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-bg-warning font-weight-bolder opacity-8">Page Items</h6>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" asp-action="index" asp-controller="shop">Shop Items</a>
                 </li>
                 <li class="nav-item">
@@ -81,8 +87,9 @@
                 <li class="nav-item">
                     <a class="nav-link" asp-action="index" asp-controller="contact">Contact</a>
                 </li>
+
                 <li class="nav-item mt-3">
-                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-bg-warning font-weight-bolder opacity-8">Account pages</h6>
                 </li>
                 <li class="nav-item">
                     <a asp-action="index" asp-controller="dashboard" class="nav-link text-white">
@@ -90,6 +97,12 @@
                             <i class="material-icons opacity-10">person</i>
                         </div>
                         <span class="nav-link-text ms-1">Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item pt-3">
+                    <a class="nav-link" asp-action="logout" asp-controller="account">
+                        <i class="mdi mdi-logout menu-icon"></i>
+                        <span class="menu-title">Logout</span>
                     </a>
                 </li>
             </ul>

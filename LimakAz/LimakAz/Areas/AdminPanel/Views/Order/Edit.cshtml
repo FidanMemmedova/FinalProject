@@ -20,9 +20,9 @@
             <p class="card-text">
                 Count: <span style="font-weight:bold">@Model.Count</span>
             </p>
-            <p class="card-text">
+            @*<p class="card-text">
                 Order Warehouse: <span style="font-weight:bold">@Model.AppUser.WareHouse.Name</span>
-            </p>
+            </p>*@
             <p class="card-text">
                 Order Date: <span style="font-weight:bold">@Model.CreatedAt.AddHours(4).ToString("dd MMM yyyy HH:mm ")</span>
             </p>
@@ -30,7 +30,8 @@
                 Order Status: <span style="font-weight:bold">@Model.Status</span>
             </p>
             <p class="card-text">
-                <span style="text-decoration: underline;color:red">Total Price</span>: <span style="font-weight:bold;">@(Model.Count * Model.Price)₼</span>
+                <span style="text-decoration: underline;color:red">Total Price</span>: <span style="font-weight:bold;">@(Model.Count * Model.Price)₼</spa
+                n>
             </p>
         </div>
 
