@@ -59,7 +59,7 @@
                             <div class="col-sm-4 col-md-3 col-6">
                                 <a href="@shopItem.RedirectUrl" class="store-item">
                                     <article class="card">
-                                        <img src="~/assets/images/@shopItem.Image" alt="">
+                                        <img src="~/uploads/shopitems/@shopItem.Image" alt="">
                                     </article>
                                 </a>
                             </div>
@@ -88,7 +88,7 @@
                             <div class="col-sm-6 col-md-4 col-12">
                                 <a href="#" class="news-card">
                                     <article class="card">
-                                        <img src="~/assets/images/news/@news.Image" alt="news" class="card-img-top">
+                                        <img src="~/uploads/news/@news.Image" alt="news" class="card-img-top">
                                         <div class="card-body">
                                             <h4 class="card-title">@news.Title</h4>
                                             <p class="card-text news-card-date">
@@ -288,7 +288,7 @@
                     @foreach (var certificate in Model.Certificates)
                     {
                         <a href="@certificate.RedirectUrl" class="partner-item">
-                            <img src="~/assets/images/certificates/@certificate.Image" alt="">
+                            <img src="~/uploads/certificates/@certificate.Image" alt="">
                         </a>
                     }
                 </div>
